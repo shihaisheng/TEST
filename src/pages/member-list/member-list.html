@@ -15,7 +15,7 @@
 
 <ion-content padding>
  
-<ion-list>
+<!--<ion-list>
   <ion-item *ngFor="let member of members">
     <ion-avatar item-left>
       <img src="{{member.avatar}}">
@@ -23,6 +23,17 @@
     <h2>{{member.name}}</h2>
     <h3>{{member.email}}</h3>
     <p>{{member.phone}}</p>
+  </ion-item>
+</ion-list>-->
+
+<ion-list>
+  <ion-item *ngFor="let member of members">
+    <ion-thumbnail item-left>
+      <img src="{{member.avatar}}">
+    </ion-thumbnail>
+    <h2>{{member.name}}</h2>
+    <p>{{member.email}}</p>
+    <button ion-button clear item-right>View</button>
   </ion-item>
 </ion-list>
 
