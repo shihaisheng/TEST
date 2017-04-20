@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ActionSheetController } from 'ionic-angular'
+import { MemberEdit } from '../member-edit/member-edit';
+
 
 @IonicPage()
 @Component({
@@ -9,6 +11,8 @@ import { ActionSheetController } from 'ionic-angular'
 })
 export class MemberList {
 members:any;
+memberEditPage:any=MemberEdit
+
   constructor(public navCtrl: NavController, public navParams: NavParams,public actionCttrl:ActionSheetController) {
     this.members=[
       {id:1,name:"shihai1",phone:"13478993520",email:"shihai.sheng@avanade.com",sex:"male",avatar:"assets/img/avatar-ts-bullseye.png",isHere:true},
@@ -63,6 +67,9 @@ members:any;
    });
 
    actionSheet.present();
+ }
+ viewMember(){
+   this.navCtrl.push(this.memberEditPage)
  }
 
   ionViewDidLoad() {

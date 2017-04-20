@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MemberListModule } from '../pages/member-list/member-list.module';
+import { MemberEditModule } from '../pages/member-edit/member-edit.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage
   ],
   imports: [
-    BrowserModule,MemberListModule,
+    BrowserModule,MemberListModule,MemberEditModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

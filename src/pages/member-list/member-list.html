@@ -33,7 +33,7 @@
     </ion-thumbnail>
     <h2>{{member.name}}</h2>
     <p>{{member.email}}</p>
-    <button ion-button clear item-right>View</button>
+    <button ion-button clear item-right (click)="viewMember()" >View</button>
   </ion-item>
 </ion-list>
 
