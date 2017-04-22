@@ -1,0 +1,54 @@
+<!--<ion-card>
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="{{product.prdimg}}">
+    </ion-avatar>
+    {{product.name}}
+  </ion-item>
+
+   <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>0 Grades</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>0 Exam</div>
+      </button>
+    </ion-col>
+    <ion-col text-center>
+      <!--<ion-note *ngIf="member.isHere" color="secondary">
+        已签到
+      </ion-note>
+       <ion-note *ngIf="!member.isHere" color="danger">
+        未签到
+      </ion-note>  ->
+      <button ion-button color="primary" outline clear (click)="chooseMember()">编辑</button>
+      <button ion-button color="danger" outline clear (click)="delete()">删除</button>
+    </ion-col>
+  </ion-row>
+</ion-card>-->
+<ion-card>
+  <ion-item  class="hproduct">
+    <div class="p-info">
+    <div class="p-pic">
+      <img  src="{{product.prdimg}}">
+    </div>
+    <p class="p-title">{{product.name}}</p>
+    <p class="price">${{product.price}}</p>
+    <!--<button ion-button clear item-right>View</button>
+     <button ion-button clear item-right color="primary" outline clear (click)="chooseMember()">编辑</button>
+      <button ion-button clear item-right color="danger" outline clear (click)="delete()">删除</button>-->
+         </div>
+      <button ion-button icon-only item-right color="primary" (click)="chooseMember()">
+        <ion-icon ios="ios-create" md="md-create"></ion-icon>
+      </button>
+      <button ion-button icon-only item-right color="danger" (click)="delete()">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+  </ion-item>
+</ion-card>
+

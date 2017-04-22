@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{currentMember?"编辑产品":"新增产品"}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="returnToHistory()" style="font-size: 2.5rem!important;">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-item>
+  <ion-label floating>产品名称</ion-label>
+  <ion-input [(ngModel)]="object.name"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>产品图片</ion-label>
+  <ion-input [(ngModel)]="object.prdimg"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>产品描述</ion-label>
+  <ion-input [(ngModel)]="object.desc"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>价格</ion-label>
+  <ion-input type="number" [(ngModel)]="object.price"></ion-input>
+</ion-item>
+
+
+
+<button block outline ion-button color="secondary" (click)="save()">保存</button>
+<button block outline ion-button color="primary" (click)="returnToHistory()">返回</button>
+</ion-content>
